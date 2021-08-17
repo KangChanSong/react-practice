@@ -11,9 +11,20 @@ import reportWebVitals from './reportWebVitals';
 //   document.getElementById('root')
 // );
 
+const element1 = (
+  <h1 className="greeting">
+    Hello, world!
+  </h1>
+);
+
+const element2 = React.createElement(
+  'h1',
+  {className: 'greeting'},
+  'Hello, world!'
+)
+
 ReactDOM.render(
-  <h1>Hello, world!</h1>,
-  document.getElementById('root')
+  element2, document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
