@@ -11,21 +11,18 @@ import reportWebVitals from './reportWebVitals';
 //   document.getElementById('root')
 // );
 
-const element1 = (
-  <h1 className="greeting">
-    Hello, world!
-  </h1>
-);
+let count = 0;
 
-const element2 = React.createElement(
-  'h1',
-  {className: 'greeting'},
-  'Hello, world!'
-)
+function tick(){
+  const element = (
+    <h1>당신은 {count}초동안 머무르고 계십니다.</h1>
+  );
+  count++;
 
-ReactDOM.render(
-  element2, document.getElementById('root')
-);
+  ReactDOM.render(element, document.getElementById('root'));
+}
+
+setInterval(tick, 1000);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
